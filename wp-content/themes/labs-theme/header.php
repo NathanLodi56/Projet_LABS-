@@ -11,15 +11,19 @@
   <link href="img/favicon.ico" rel="shortcut icon" />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
-
+<!--   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700|Roboto:300,400,700" rel="stylesheet">
+ -->
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/flaticon.css" />
   <link rel="stylesheet" href="css/magnific-popup.css" />
   <link rel="stylesheet" href="css/owl.carousel.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" /> -->
+  <?php
+wp_head();
+
+?>
 
 
   <!--[if lt IE 9]>
@@ -33,7 +37,7 @@
   <!-- Page Preloder -->
   <div id="preloder">
     <div class="loader">
-      <img src="img/logo.png" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="">
       <h2>Loading.....</h2>
     </div>
   </div>
@@ -42,7 +46,7 @@
   <!-- Header section -->
   <header class="header-section">
     <div class="logo">
-      <img src="img/logo.png" alt=""><!-- Logo -->
+      <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""><!-- Logo -->
     </div>
     <!-- Navigation -->
     <div class="responsive"><i class="fa fa-bars"></i></div>
