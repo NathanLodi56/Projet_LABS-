@@ -84,10 +84,35 @@ class MgCustomizer
         
 
 
+        // Home_page Debut de la section 2 about du début ( setting)
         $wp_customize->add_setting('about_id_text', [
             'type' => 'theme_mod',
             // 'sanitize_callback' => 'sanitize_hex_color'
         ]);
+
+        $wp_customize->add_setting('about_id_colonne1', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+        $wp_customize->add_setting('about_id_colonne2', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+        $wp_customize->add_setting('about_id_vignette_video', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+        $wp_customize->add_setting('about_id_video', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+        // Home_page fin de la section 2 about du début ( setting)
+
+
+
 
         $wp_customize->add_setting('testi_id_text', [
             'type' => 'theme_mod',
@@ -165,13 +190,68 @@ class MgCustomizer
         //Home-page Fin de la section intro du début ( control)
 
 
+        // Home_page Debut de la section 2 about du début (control)
 
         $wp_customize->add_control('about_control_text', [
-            'label' => 'Changer titre section',
+            'label' => 'Changer le titre haut dessus des colonnes',
             'section' => 'about_sec',
             'settings' => 'about_id_text',
 
         ]);
+
+        $wp_customize->add_control('about_control_col_1', [
+            'label' => 'Changer texte colonne 1',
+            'section' => 'about_sec',
+            'settings' => 'about_id_colonne1',
+            'type' => 'textarea'
+        ]);
+
+        $wp_customize->add_control('about_control_col_2', [
+            'label' => 'Changer texte colonne 2',
+            'section' => 'about_sec',
+            'settings' => 'about_id_colonne2',
+            'type' => 'textarea'
+
+        ]);
+
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+                'about_control_vignette_video',
+                array(
+                    'label'      => "Changer l'image de la vignette_video ",
+                    'section'    => 'about_sec',
+                    'settings'   => 'about_id_vignette_video',
+                )
+            )
+        );
+
+        $wp_customize->add_control('about_control_video', [
+            'label' => 'Changer url de la video',
+            'section' => 'about_sec',
+            'settings' => 'about_id_video',
+            'type' => 'url'
+        ]);
+
+        //Home-page Fin de la section intro du début ( control)
+
+
+        // $wp_customize->add_control(
+        //     new WP_Customize_Image_Control(
+        //         $wp_customize,
+        //         'about_id_video',
+        //         array(
+        //             'label'      => "Changer l'arrière-plan 2 (background) ",
+        //             'section'    => 'intro_sec',
+        //             'settings'   => 'intro_id_BG_2',
+        //         )
+        //     )
+        // );
+
+
+
+        // Home_page Fin de la section 2 about du début (control)
+
         
         $wp_customize->add_control('testi_control_text', [
             'label' => 'Changer titre section',
