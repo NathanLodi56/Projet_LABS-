@@ -112,30 +112,86 @@ class MgCustomizer
         // Home_page fin de la section 2 about du début ( setting)
 
 
+        // Home_page Debut de la section 3 about du début ( setting)
 
 
         $wp_customize->add_setting('testi_id_text', [
             'type' => 'theme_mod',
             // 'sanitize_callback' => 'sanitize_hex_color'
         ]);
+
+         // Home_page  de la section 3 about du début ( setting)
+
+        
+        // Home_page Début de la section 4 services  du début (setting)
+
         $wp_customize->add_setting('services_id', [
             'type' => 'theme_mod',
             // 'sanitize_callback' => 'sanitize_hex_color'
         ]);
+        // Home_page Début de la section 4 services  du début (setting)
+
+
+        // Home_page Début de la section 5 Team  du début (setting)
+
         $wp_customize->add_setting('team_id', [
             'type' => 'theme_mod',
             // 'sanitize_callback' => 'sanitize_hex_color'
         ]);
-        $wp_customize->add_setting('promotion_id', [
+        // Home_page Début de la section 5 Team  du fin (setting)
+
+
+        // Home_page Début de la section 6 Promo  du début (setting)
+
+        $wp_customize->add_setting('promotion_id_titre', [
             'type' => 'theme_mod',
             // 'sanitize_callback' => 'sanitize_hex_color'
         ]);
-        $wp_customize->add_setting('contact_id', [
+
+        $wp_customize->add_setting('promotion_id_textarea', [
             'type' => 'theme_mod',
             // 'sanitize_callback' => 'sanitize_hex_color'
         ]);
 
 
+        // Home_page Début de la section 6 Promo  du fin (setting)
+        
+
+        // Home_page Début de la section 7 Contanct  du début (setting)
+
+        $wp_customize->add_setting('contact_id_titre', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+        $wp_customize->add_setting('contact_id_textarea', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+        $wp_customize->add_setting('contact_id_titre_2', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+        $wp_customize->add_setting('contact_id_lieu_1_2', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+
+        $wp_customize->add_setting('contact_id_numero_3', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+
+        $wp_customize->add_setting('contact_id_mail_4', [
+            'type' => 'theme_mod',
+            // 'sanitize_callback' => 'sanitize_hex_color'
+        ]);
+        // Home_page Début de la section 7 Contanct  du fin (setting)
+
+        
 
 
         //Home-page Debut de la section intro du début ( control)
@@ -233,65 +289,121 @@ class MgCustomizer
             'type' => 'url'
         ]);
 
-        //Home-page Fin de la section intro du début ( control)
+        //Home-page Début de la section 2 about du début ( control)
 
 
-        // $wp_customize->add_control(
-        //     new WP_Customize_Image_Control(
-        //         $wp_customize,
-        //         'about_id_video',
-        //         array(
-        //             'label'      => "Changer l'arrière-plan 2 (background) ",
-        //             'section'    => 'intro_sec',
-        //             'settings'   => 'intro_id_BG_2',
-        //         )
-        //     )
-        // );
+        // Home_page Début de la section 3 testimonial testimonial du début (control)
 
-
-
-        // Home_page Fin de la section 2 about du début (control)
-
-        
         $wp_customize->add_control('testi_control_text', [
-            'label' => 'Changer titre section',
+            'label' => 'Changer le titre principal ',
             'section' => 'testimonial_sec',
             'settings' => 'testi_id_text',
-
+C
         ]);
+        // Home_page Début de la section 3 testimonial testimonial du fin (control)
+
+
+        // Home_page Début de la section 4 services  du début (control)
+
 
         $wp_customize->add_control('serv_control_text', [
-            'label' => 'Changer titre section',
+            'label' => 'Changer le titre principal',
             'section' => 'services_sec',
             'settings' => 'services_id',
 
         ]);
 
+        // Home_page Début de la section 4 services  du début (control)
+
+
+
+        // Home_page Début de la section 5 Team  du début (control)
+
         $wp_customize->add_control('team_control_text', [
-            'label' => 'Changer titre section',
+            'label' => 'Changer le titre Princpal',
             'section' => 'team_sec',
             'settings' => 'team_id',
 
         ]);
 
-        $wp_customize->add_control('promo_control_text', [
-            'label' => 'Changer titre section',
+        // Home_page Début de la section 5 Team  du fin (control)
+
+
+        // Home_page Début de la section 6 promo  du début (control)
+
+        $wp_customize->add_control('promo_control_titre', [
+            'label' => 'Changer le titre principal',
             'section' => 'promotion_sec',
-            'settings' => 'promotion_id',
+            'settings' => 'promotion_id_titre',
 
         ]);
+
+        $wp_customize->add_control('promo_control_text', [
+            'label' => 'Changer le text',
+            'section' => 'promotion_sec',
+            'settings' => 'promotion_id_text',
+
+        ]);
+
+
+        // Home_page Début de la section 6 promo  du fin (control)
+
+
+
+
+        // Home_page Début de la section 7 promo  du début (control)
+
+        $wp_customize->add_control('contact_control_titre', [
+            'label' => 'Changer le titre principal 1',
+            'section' => 'contact_section',
+            'settings' => 'contact_id_titre',
+
+        ]);
+
 
         $wp_customize->add_control('contact_control_text', [
-            'label' => 'Changer titre section',
+            'label' => 'Changer le text',
             'section' => 'contact_section',
-            'settings' => 'contact_id',
+            'settings' => 'contact_id_textarea',
+            'type' => 'textarea'
 
         ]);
+
+        $wp_customize->add_control('contact_control_titre2', [
+            'label' => 'Changer le titre princpal 2',
+            'section' => 'contact_section',
+            'settings' => 'contact_id_titre_2',
+
+        ]);
+
+        $wp_customize->add_control('contact_control_lieu_1_2', [
+            'label' => 'Changer le lieu + adress ( mettre / pour passer à la ligne en dessous) ',
+            'section' => 'contact_section',
+            'settings' => 'contact_id_lieu_1_2',
+
+        ]);
+
+
+
+        $wp_customize->add_control('contact_control_numero_3', [
+            'label' => 'Changer le numero',
+            'section' => 'contact_section',
+            'settings' => 'contact_id_numero_3',
+
+        ]);
+
+        $wp_customize->add_control('contact_control_mail_4', [
+            'label' => 'Changer le mail',
+            'section' => 'contact_section',
+            'settings' => 'contact_id_mail_4',
+
+        ]);
+
+        // Home_page Début de la section 7 promo  du fin (control)
 
 
     }
 }
 
 add_action('customize_register', [MgCustomizer::class, 'rajout_section_about_bg']);
-
 

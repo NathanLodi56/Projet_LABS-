@@ -47,11 +47,11 @@
       <div class="section-title">
         <h2>
           <?php
-            $monTxt = get_theme_mod('about_id_text');
-            $monTxt = str_replace("[", "<span>", $monTxt);
-            $monTxt = str_replace("]", "</span>", $monTxt);
-            echo $monTxt;
-            ?>
+          $monTxt = get_theme_mod('about_id_text');
+          $monTxt = str_replace("[", "<span>", $monTxt);
+          $monTxt = str_replace("]", "</span>", $monTxt);
+          echo $monTxt;
+          ?>
         </h2>
       </div>
       <div class="row">
@@ -70,7 +70,7 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
             <img src="<?php echo get_theme_mod('about_id_vignette_video') ?>">
-            <a href="<?php echo get_theme_mod('about_id_video') ?>"£ class="video-popup">
+            <a href="<?php echo get_theme_mod('about_id_video') ?>" class="video-popup">
               <i class="fa fa-play"></i>
             </a>
           </div>
