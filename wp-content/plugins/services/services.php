@@ -17,8 +17,13 @@ use App\Features\MetaBoxes\ServicesDetailsMetabox;
 
 require_once('autoload.php');
 
+require_once('env.php');
+require_once('helpers.php');
 
 add_action('init',[ServicesPostType::class,'register']);
 //add_action('init',[ServicesDetailsMetabox::class,'add_meta_box']);
 add_action('add_meta_boxes_service', [ServicesDetailsMetabox::class,'add_meta_box']);  
+
+add_action('save_post_' . ServicesPostType::$slug, [ServicesDetailsMetabox::class, 'save']); 
+
 
