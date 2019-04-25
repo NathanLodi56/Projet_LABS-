@@ -1,0 +1,1 @@
+<input type="text" name="nom_testi" size="30" value="map" id="job_testi">

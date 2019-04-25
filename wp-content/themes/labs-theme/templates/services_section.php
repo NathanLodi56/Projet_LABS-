@@ -1,4 +1,4 @@
-<!-- Services section -->
+guià!<!-- Services section -->
 <div class="services-section spad">
   <div class="container">
     <div class="section-title dark">
@@ -16,6 +16,7 @@
       wp_reset_query();
       $args = [
         'post_type' => 'service',
+        'orderby' => 'rand', 
         'posts_per_page' => 9,
       ];
       $query = new WP_Query($args);
@@ -26,17 +27,13 @@
           <div class="service">
             <div class="icon">
               <!-- <i class="flaticon-023-flask"></i> -->
-              
+              <i class="<?= get_post_meta(get_the_ID(),'icones_services',true); ?>"></i>
             </div>
             <div class="service-text">
-            <?php while (have_posts()): the_post(); ?>
               <h2>
               <?php the_title(); ?>
               </h2>
-              <?php endwhile; ?>
-
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est, feugiat nec elementum id, suscipit id nulla..</p>
+              <p><?php the_content(); ?></p>
             </div>
           </div>
         </div>
